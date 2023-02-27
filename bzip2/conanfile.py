@@ -3,6 +3,12 @@ from conan import ConanFile
 class Bzip2Conan(ConanFile):
     name = "bzip2"
     version = "1.0.8"
+    options = {
+        "shared": [True, False],
+    }
+    default_options = {
+        "shared": True,
+    }
 
     def package_info(self):
         self.cpp_info.includedirs = []

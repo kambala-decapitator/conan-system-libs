@@ -3,6 +3,12 @@ from conan import ConanFile
 class ZlibConan(ConanFile):
     name = "zlib"
     version = "1.2.12"
+    options = {
+        "shared": [True, False],
+    }
+    default_options = {
+        "shared": True,
+    }
 
     def package_info(self):
         self.cpp_info.includedirs = []

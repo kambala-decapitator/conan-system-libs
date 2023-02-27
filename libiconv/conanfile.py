@@ -3,6 +3,12 @@ from conan import ConanFile
 class IconvConan(ConanFile):
     name = "libiconv"
     version = "1.17"
+    options = {
+        "shared": [True, False],
+    }
+    default_options = {
+        "shared": True,
+    }
 
     def package_info(self):
         self.cpp_info.includedirs = []

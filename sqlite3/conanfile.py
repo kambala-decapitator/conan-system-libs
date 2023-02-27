@@ -6,9 +6,11 @@ class Sqlite3Conan(ConanFile):
 
     # Qt recipe tries to set options
     options = {
+        "shared": [True, False],
         "enable_column_metadata": [True, False],
     }
     default_options = {
+        "shared": True,
         "enable_column_metadata": True,
     }
 
