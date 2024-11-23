@@ -11,7 +11,7 @@ class ZlibConan(ConanFile):
     }
 
     def package_info(self):
-        self.cpp_info.includedirs = []
+        self.cpp_info.includedirs = [""] # some recipes try to read include dirs
 
         libName = "z"
         self.cpp_info.system_libs = [libName]
@@ -23,6 +23,3 @@ class ZlibConan(ConanFile):
         self.cpp_info.set_property("cmake_file_name", "ZLIB")
         self.cpp_info.set_property("cmake_target_name", "ZLIB::ZLIB")
         self.cpp_info.set_property("pkg_config_name", "zlib")
-
-        self.cpp_info.names["cmake_find_package"] = "ZLIB"
-        self.cpp_info.names["cmake_find_package_multi"] = "ZLIB"

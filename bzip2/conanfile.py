@@ -22,6 +22,3 @@ class Bzip2Conan(ConanFile):
         self.cpp_info.set_property("cmake_find_mode", "both")
         self.cpp_info.set_property("cmake_file_name", "BZip2")
         self.cpp_info.set_property("cmake_target_name", "BZip2::BZip2")
-
-        self.cpp_info.names["cmake_find_package"] = "BZip2"
-        self.cpp_info.names["cmake_find_package_multi"] = "BZip2"
